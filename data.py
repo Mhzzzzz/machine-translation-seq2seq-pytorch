@@ -76,8 +76,10 @@ class DataHelper(object):
 			corpus_length = np.array([len(i) for i in corpus])
 			self.max_sentence_length = corpus_length.max()
 			self.min_sentence_length = corpus_length.min()
+			self.corpus_num = len(corpus)
 			return np.array(corpus), np.array(corpus_length)
 		else:
+			self.corpus_num = len(corpus)
 			return np.array(corpus)
 
 
