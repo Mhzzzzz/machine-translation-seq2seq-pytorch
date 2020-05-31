@@ -42,7 +42,7 @@ def main():
 	# ======================
 	# 数据
 	# ======================
-	DOMTree = xml.dom.minidom.parse('../_data/en-hr.tmx')
+	DOMTree = xml.dom.minidom.parse('en-hr.tmx')
 	collection = DOMTree.documentElement
 	raw = list(collection.getElementsByTagName('tu'))
 	raw_en = [raw[i].childNodes[1].childNodes[0].childNodes[0].data for i in range(len(raw))]
